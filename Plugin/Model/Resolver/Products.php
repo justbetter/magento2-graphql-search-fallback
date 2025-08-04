@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace JustBetter\GraphqlSearchFallback\Plugin;
+namespace JustBetter\GraphqlSearchFallback\Plugin\Model\Resolver;
 
 use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory;
-use Magento\CatalogGraphQl\Model\Resolver\Products;
+use Magento\CatalogGraphQl\Model\Resolver\Products as ProductsResolver;
 use Magento\Framework\GraphQl\Config\Element\Field;
 use Magento\Framework\GraphQl\Query\Uid;
 use Magento\Framework\GraphQl\Schema\Type\ResolveInfo;
 
-class ProductsPlugin
+class Products
 {
     public function __construct(
         private CollectionFactory $productCollectionFactory,
@@ -19,7 +19,7 @@ class ProductsPlugin
     }
 
     public function aroundResolve(
-        Products $subject,
+        ProductsResolver $subject,
         callable $proceed,
         Field $field,
         $context,
