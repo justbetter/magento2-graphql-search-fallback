@@ -1,0 +1,24 @@
+{
+    "name": "justbetter/magento2-graphql-search-fallback",
+    "description": "Magento 2 module providing GraphQL product query fallback when search engine is disabled",
+    "type": "magento2-module",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.1",
+        "magento/framework": "^103.0",
+        "magento/module-catalog": "^104.0",
+        "magento/module-catalog-graph-ql": "^100.4"
+    },
+    "authors": [
+        {
+            "name": "Claudio Ferraro",
+            "email": "claudio@justbetter.nl"
+        }
+    ],
+    "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "JustBetter\\GraphqlSearchFallback\\": ""
+        }
+    }
+}
