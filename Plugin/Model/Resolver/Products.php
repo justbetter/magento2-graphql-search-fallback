@@ -46,7 +46,7 @@ class Products
         $products = [];
         foreach ($collection as $product) {
             $product->setData('options', $product->getProductOptionsCollection());
-            $products[] = $product->getData() + ['model' => $product];
+            $products[] = ['model' => $product] + $product->getData();
         }
         
         return [
